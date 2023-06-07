@@ -1,0 +1,6 @@
+data/**
+__pycache__/
+/dist
+.coverage
+.vscode
+*.code-workspace
