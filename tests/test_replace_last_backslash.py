@@ -12,6 +12,11 @@ def test_replace_last_backslash():
     assert replace_last_backslash("no_backslash") == "no_backslash"
     assert replace_last_backslash("") == ""
 
+    # Testing a string where all characters are backslashes
+    assert replace_last_backslash("\\\\\\\\") == "\\\\\\/"
+    # Testing a string with mixed slashes ("/" and "\\")
+    assert replace_last_backslash("C:/Users\\John\\Desktop") == "C:/Users\\John/Desktop"
+
 
 def test_replace_last_backslash_with_multiple_backslashes():
     assert replace_last_backslash("A\\B\\C\\D\\E\\F") == "A\\B\\C\\D\\E/F"
@@ -35,3 +40,14 @@ def test_replace_last_backslash_with_special_characters():
         replace_last_backslash("D:\\path\\with\\parentheses\\(file).txt")
         == "D:\\path\\with\\parentheses/(file).txt"
     )
+
+
+def test_replace_last_backslash_with_empty_string():
+    assert replace_last_backslash("") == ""
+
+
+def test_replace_last_backslash_with_strings_without_backslashes():
+    assert replace_last_backslash("no_backslash") == "no_backslash"
+    assert replace_last_backslash("forward/slash/only") == "forward/slash/only"
+    assert replace_last_backslash("normal string without slashes") == "normal string without slashes"
+
