@@ -1,6 +1,6 @@
 # replace_last_backslash
 
-Python package for replacing the last backslash '\\' in a path string with a forward slash '/'.
+Python package for replacing the last backslash '\\' in a path string with a forward slash '/'. This is a toy project used to explore Python packaging, distribution, and deployment.
 
 ## Installation
 
